@@ -1,0 +1,84 @@
+<ion-view hide-nav-bar="false" hide-back-button="true" cache-view="false" title="Search">
+    <!-- do you want padding? -->
+    <ion-content class="bg-g paddingZero has-header" has-bouncing="false">
+        <form name="searchForm" novalidate="" ng-submit="loginSubmit(searchForm,searchInfo)">
+            <div class="row ">
+                <div class="col col-10"></div>
+                <div class="col col-80 text-center">
+                    <i class="icon ion-calendar cal-s"></i>
+                    <span class="day-s">Today, </span>
+                    <span class="date-s">April 12th, 2013</span>
+                </div>
+                <div class="col col-10"></div>
+            </div>
+            <div class="row ">
+                <div class="col col-10"></div>
+                <div class="col col-80 text-center">
+                    <input class="login-input" type="text" name="to" ng-model="searchInfo.to" placeholder="To" required />
+                </div>
+                <div class="col col-10">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col  text-center">
+                    <div ng-show="searchForm.to.$error && searchForm.$submitted" ng-messages="searchForm.to.$error">
+                        <div ng-messages-include="error-list.html"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-10"></div>
+                <div class="col col-80 text-center">
+                    <input class="login-input" type="text" name="from" ng-model="searchInfo.from" required placeholder="From" />
+                </div>
+                <div class="col col-10">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col  text-center">
+                    <div ng-show="searchForm.from.$error &&searchForm.$submitted" ng-messages="searchForm.from.$error">
+                        <div ng-messages-include="error-list.html"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-10"></div>
+                <div class="col col-80 text-center">
+                    <input class="login-input date-input" type="text" name="when" ng-model="searchInfo.when" placeholder="When" required />
+                    <i class="icon ion-calendar cal-s cal-iconfull"></i>
+                </div>
+                <div class="col col-10">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-10"></div>
+                <div class="col col-80 text-center">
+                    <select class="select-st">
+                        <option value="">Type of Vehicle</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                    </select>
+                </div>
+                <div class="col col-10">
+                </div>
+            </div>
+            <div class="row custom-space">
+                <div class="col col-10"></div>
+                <div class="col col-80">
+                    <rzslider rz-slider-model="slider_ticks_values.value" rz-slider-options="slider_ticks_values.options"></rzslider>
+                </div>
+                <div class="col col-10"></div>
+            </div>
+            <div class="row">
+                <div class="col text-center">
+                    <button class="button button-small button-stable search-btn">Search</button>
+                </div>
+            </div>
+            <div class="row paddingZero">
+                <div class="col text-center map-s">
+                    Map
+                </div>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

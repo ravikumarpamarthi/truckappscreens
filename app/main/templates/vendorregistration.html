@@ -1,0 +1,146 @@
+<ion-view hide-nav-bar="false" hide-back-button="true" cache-view="false" view-title="Vendor Registration">
+    <ion-content class="bg-g has-header">
+        <div class="row mb-pb-0" >
+            <div class="col text-center">
+                <small class="white-c too-small">Join our vendor community and start to promote products.</small>
+
+            </div>
+        </div>
+        <div class="row mt-pt-0" >
+        <div class="col col-10"></div>
+        <div class="col red-c">Join Now!</div>
+        </div>
+        
+        <form class="mt-pt-0" name="vendorRegistrationForm" novalidate="" ng-submit="signUp(vendorRegistrationForm,data)">
+            
+            
+            <div class="row mt-pt-0">
+                <div class="col col-10"></div>
+                <div class="col col-80 text-center">
+                    <input class="login-input" type="text" name="name" ng-model="data.name" placeholder="Name" required />
+                </div>
+                <div class="col col-10">
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col  text-center">
+                    <div ng-show="vendorRegistrationForm.name.$error && vendorRegistrationForm.$submitted" ng-messages="vendorRegistrationForm.name.$error">
+                        <div ng-messages-include="error-list.html"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-10"></div>
+                <div class="col col-80 text-center">
+                    <input class="login-input" type="text" name="username" ng-model="data.username" placeholder="Username" required />
+                </div>
+                <div class="col col-10">
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col  text-center">
+                    <div ng-show="vendorRegistrationForm.username.$error && vendorRegistrationForm.$submitted" ng-messages="vendorRegistrationForm.username.$error">
+                        <div ng-messages-include="error-list.html"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-10"></div>
+                <div class="col col-80 text-center">
+                    <input class="login-input" type="email" name="email" ng-model="data.email" placeholder="Email Address" required />
+                </div>
+                <div class="col col-10">
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col  text-center">
+                    <div ng-show="vendorRegistrationForm.email.$error && vendorRegistrationForm.$submitted" ng-messages="vendorRegistrationForm.email.$error">
+                        <div ng-messages-include="error-list.html"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-10"></div>
+                <div class="col col-80 text-center">
+                    <input class="login-input" type="password" name="password" ng-model="data.password" placeholder="Password" required />
+                </div>
+                <div class="col col-10">
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col  text-center">
+                    <div ng-show="vendorRegistrationForm.password.$error && vendorRegistrationForm.$submitted" ng-messages="vendorRegistrationForm.password.$error">
+                        <div ng-messages-include="error-list.html"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-10"></div>
+                <div class="col col-80 text-center">
+                    <input class="login-input" type="password" name="confirmpassword" ng-model="data.confirmpassword" placeholder="Confirm Password" required />
+                </div>
+                <div class="col col-10">
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col  text-center">
+                    <div ng-show="vendorRegistrationForm.confirmpassword.$error && vendorRegistrationForm.$submitted" ng-messages="vendorRegistrationForm.confirmpassword.$error">
+                        <div ng-messages-include="error-list.html"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-10"></div>
+                <div class="col col-80 text-center">
+                    <input class="login-input" type="text" name="companyname" ng-model="data.companyname" placeholder="Company Name" required />
+                </div>
+                <div class="col col-10">
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col  text-center">
+                    <div ng-show="vendorRegistrationForm.companyname.$error && vendorRegistrationForm.$submitted" ng-messages="vendorRegistrationForm.companyname.$error">
+                        <div ng-messages-include="error-list.html"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-10"></div>
+                <div class="col col-80 text-center">
+                    <input class="login-input" type="email" name="vendoremail" ng-model="data.vendoremail" placeholder="Vendor Email" required />
+                </div>
+                <div class="col col-10">
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col text-center">
+                    <div ng-show="vendorRegistrationForm.vendoremail.$error && vendorRegistrationForm.$submitted" ng-messages="vendorRegistrationForm.vendoremail.$error">
+                        <div ng-messages-include="error-list.html"></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col col-10"></div>
+                <div class="col col-80 text-center">
+                    <select class="select-st">
+                        <option value="">Vendor Program</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                    </select>
+                </div>
+                <div class="col col-10">
+                </div>
+            </div>
+         
+            <div class="row padding padding-tb-zero">
+                <div class="col col-10"></div>
+                <div class="col col-80 text-center padding-tb-zero">
+                    <button class="button button-block button-small button-positive login-submit or-fst">Sign Up</button>
+                </div>
+                <div class="col col-10"></div>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,109 @@
+<ion-view hide-nav-bar="false" hide-back-button="true" cache-view="false" view-title="Registration">
+    <ion-content class="bg-g has-header">
+        <form name="registrationForm" novalidate="" ng-submit="signUp(registrationForm,authorization)">
+            <div class="row padding">
+                <div class="col col-10"></div>
+                <div class="col col-80 text-center">
+                    <input class="login-input" type="text" name="firstname" ng-model="authorization.firstname" placeholder="First Name" required />
+                </div>
+                <div class="col col-10">
+                </div>
+            </div>
+            <div class="row padding">
+                <div class="col  text-center">
+                    <div ng-show="registrationForm.firstname.$error && registrationForm.$submitted" ng-messages="registrationForm.firstname.$error">
+                        <div ng-messages-include="error-list.html"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row padding">
+                <div class="col col-10"></div>
+                <div class="col col-80 text-center">
+                    <input class="login-input" type="text" name="lastname" ng-model="authorization.lastname" placeholder="Last Name" required />
+                </div>
+                <div class="col col-10">
+                </div>
+            </div>
+            <div class="row padding">
+                <div class="col  text-center">
+                    <div ng-show="registrationForm.lastname.$error && registrationForm.$submitted" ng-messages="registrationForm.lastname.$error">
+                        <div ng-messages-include="error-list.html"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row padding">
+                <div class="col col-10"></div>
+                <div class="col col-80 text-center">
+                    <input class="login-input" type="email" name="email" ng-model="authorization.email" placeholder="Email Address" required />
+                </div>
+                <div class="col col-10">
+                </div>
+            </div>
+            <div class="row padding">
+                <div class="col  text-center">
+                    <div ng-show="registrationForm.email.$error.pattern">
+                        <font>Please Enter valid Email</font>
+                    </div>
+                    <div ng-show="registrationForm.email.$error && registrationForm.$submitted" ng-messages="registrationForm.email.$error">
+                        <div ng-messages-include="error-list.html"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row padding">
+                <div class="col col-10"></div>
+                <div class="col col-80 text-center">
+                    <input class="login-input" type="tel" name="contactno" ng-model="authorization.contactno" placeholder="Contact number" required />
+                </div>
+                <div class="col col-10">
+                </div>
+            </div>
+            <div class="row padding">
+                <div class="col  text-center">
+                    <div ng-show="registrationForm.contactno.$error && registrationForm.$submitted" ng-messages="registrationForm.contactno.$error">
+                        <div ng-messages-include="error-list.html"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row padding">
+                <div class="col col-10"></div>
+                <div class="col col-80 text-center">
+                    <input class="login-input" type="text" name="userId" ng-model="authorization.userId" placeholder="User Id" required />
+                </div>
+                <div class="col col-10">
+                </div>
+            </div>
+            <div class="row padding">
+                <div class="col  text-center">
+                    <div ng-show="registrationForm.userId.$error && registrationForm.$submitted" ng-messages="registrationForm.userId.$error">
+                        <div ng-messages-include="error-list.html"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row padding">
+                <div class="col col-10"></div>
+                <div class="col col-80 text-center">
+                    <input class="login-input" type="password" name="password" ng-model="authorization.password" placeholder="Password" required />
+                </div>
+                <div class="col col-10">
+                </div>
+            </div>
+            <div class="row padding">
+                <div class="col  text-center">
+                    <div ng-show="registrationForm.password.$error && registrationForm.$submitted" ng-messages="registrationForm.password.$error">
+                        <div ng-messages-include="error-list.html"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row padding padding-tb-zero">
+                <div class="col col-10"></div>
+                <div class="col col-80 text-center padding-tb-zero">
+                    <button class="button button-block button-small button-positive login-submit or-fst">Sign up</button>
+                </div>
+                <div class="col col-10"></div>
+            </div>
+            <div class="login-fb-pos" ng-click="$root.go('main.login')">
+                <span class="login-fp-anchor">Login</span>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

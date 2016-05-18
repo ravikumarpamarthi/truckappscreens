@@ -1,0 +1,79 @@
+<ion-side-menus enable-menu-with-back-views="false">
+    <!-- CONTENT -->
+    <ion-side-menu-content>
+        <!-- header bar -->
+        <!-- the nav bar will be updated as we navigate between views -->
+        <ion-nav-bar class="bar-positive bar-balanced-new" align-title="center">
+            <!-- back button, shown if applicable -->
+            <ion-nav-back-button>
+
+            </ion-nav-back-button>
+            <!-- nav button, shown if applicable -->
+            <ion-nav-buttons side="left">
+                <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+                </button>
+            </ion-nav-buttons>
+            <ion-nav-buttons side="right">
+                <div class="row login-right-button">
+                    <div class="col col-center">Login</div>
+                </div>    
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <!-- ROUTING INJECTED HERE: pageContent -->
+        <ion-nav-view name="pageContent"></ion-nav-view>
+    </ion-side-menu-content>
+    <!-- SIDEMENU -->
+    <ion-side-menu side="left">
+        <!-- menu header -->
+        <ion-header-bar class="bar-positive bar-balanced-new" >
+            <h1 class="title">Menu</h1>
+        </ion-header-bar>
+        <!-- menu content -->
+        <ion-content>
+            <ion-list>
+                <ion-item menu-close ui-sref="main.login">
+                    Login
+                </ion-item>
+                <ion-item menu-close ui-sref="main.registration">
+                    Registration
+                </ion-item>
+                <ion-item menu-close ui-sref="main.dashboard">
+                    Dashboard
+                </ion-item>
+                <ion-item menu-close ui-sref="main.supplierslist">
+                    Suppliers List
+                </ion-item>
+                <ion-item menu-close ui-sref="main.booking">
+                    Booking
+                </ion-item>
+                <ion-item menu-close ui-sref="main.search">
+                    Search
+                </ion-item>
+                <ion-item menu-close ui-sref="main.confirmorder">
+                    Confirm Order
+                </ion-item>
+                <ion-item menu-close ui-sref="main.vendororderhistory">
+                    Order History
+                </ion-item>
+                <ion-item menu-close ui-sref="main.vendorvehicleregistration">
+                    Vehicle Registration
+                </ion-item>
+                <ion-item menu-close ui-sref="main.vendorregistration">
+                    Vendor Registration
+                </ion-item>
+                <ion-item menu-close ui-sref="main.vendordashboard">
+                    Vendor Dashboard
+                </ion-item>
+                <ion-item menu-close ui-sref="main.vendororderlist">
+                    Order List
+                </ion-item>
+                <ion-item menu-close ui-sref="main.vendorinvoicegeneration">
+                    Invoice Generation
+                </ion-item>
+                <ion-item menu-close ui-sref="main.vendoralerts">
+                    Vendor Alerts
+                </ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>
